@@ -1,0 +1,8 @@
+{
+    "name": "infra-pulumi-test",
+    "devDependencies": {},
+    "dependencies": {
+        "@pulumi/pulumi": "3.162.0",
+        "@pulumi/aws": "6.77.0"
+    }
+}
