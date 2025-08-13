@@ -1,3 +1,7 @@
 name: infra-pulumi-test
 runtime: nodejs
 description: A simple Pulumi project to test pipeline
+config:
+  kubeconfig:
+    type: string
+    description: The kubeconfig to use
