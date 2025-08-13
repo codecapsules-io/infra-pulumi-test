@@ -1,8 +1,10 @@
 {
-    "name": "infra-pulumi-test",
-    "devDependencies": {},
-    "dependencies": {
-        "@pulumi/pulumi": "3.162.0",
-        "@pulumi/aws": "6.77.0"
-    }
+  "name": "infra-pulumi-test",
+  "devDependencies": {},
+  "dependencies": {
+    "@pulumi/aws": "7.3.1",
+    "@pulumi/awsx": "3.0.0",
+    "@pulumi/kubernetes": "4.23.0",
+    "@pulumi/pulumi": "3.188.0"
+  }
 }

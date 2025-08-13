@@ -1,7 +1,14 @@
-import * as aws from "@pulumi/aws";
+import { Config } from '@pulumi/pulumi';
+import { Provider } from '@pulumi/kubernetes';
 
-// Create an S3 bucket
-const bucket = new aws.s3.Bucket("infra-pulumi-test");
+import { Namespace } from './utils';
 
-// Export the bucket name
-export const bucketName = bucket.id;
+const config = new Config();
+const kubeconfig = config.require('kubeconfig');
+
+const k8sProvider = new Provider('k8sProvider', { kubeconfig });
+
+Namespace.setProvider(k8sProvider);
+
+// create a test namespace
+Namespace.create('test');
